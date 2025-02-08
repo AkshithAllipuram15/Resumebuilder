@@ -1,0 +1,20 @@
+<!-- create_resume.html -->
+<form id="resume-form">
+    <input type="text" id="name" placeholder="Full Name" />
+    <textarea id="summary" placeholder="Summary"></textarea>
+    <button type="submit">Save</button>
+</form>
+
+<div id="preview"></div>
+
+<script>
+    document.getElementById("resume-form").addEventListener("input", function() {
+        const name = document.getElementById("name").value;
+        const summary = document.getElementById("summary").value;
+
+        document.getElementById("preview").innerHTML = `
+            <h1>${name}</h1>
+            <p>${summary}</p>
+        `;
+    });
+</script>
